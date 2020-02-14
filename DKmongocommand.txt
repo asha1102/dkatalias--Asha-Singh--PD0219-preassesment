@@ -1,0 +1,12 @@
+Ans3)Write a MongoDB query to arrange the name of the restaurants in descending along with all the columns.
+db.restaurants.find().sort({"name":-1});
+
+
+Ans4)Write a MongoDB query to find the restaurants which belong to the borough Bronx and prepared either American or Chinese dish.
+db.restaurants.find({
+"borough":"Bronx",
+$or:[
+{"cuisine":"American"},
+{"cuisine":"Chinese"}
+]
+});
